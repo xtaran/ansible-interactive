@@ -29,9 +29,11 @@ mssh-ansible.sh debian rhel
 noping-ansible.sh webserver dbserver
 ```
 
-Dependencies
+Requirements
 ------------
 
+* A host which can run your Ansible playbooks and which can run X11
+  applications.
 * [Ansible](https://www.ansible.com/) of course, probably version 2.7
   upwards, tested with 2.10.
 * [`mssh`](http://hgarcia.es/) and [Liboping](https://noping.cc/) (aka
