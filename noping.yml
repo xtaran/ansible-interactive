@@ -1,0 +1,11 @@
+#!/usr/bin/env ansible-playbook
+---
+- hosts: all
+  gather_facts: no
+  become: no
+  tasks:
+  - name: 'Run "noping" for all specified hosts'
+    delegate_to: localhost
+    run_once: yes
+    shell:
+      cmd: "uxterm -fn -misc-fixed-medium-r-normal--7-70-75-75-c-50-iso10646-1 -e noping {{ ansible_play_hosts | sort | join(' ') }} &"

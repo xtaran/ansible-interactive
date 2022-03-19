@@ -1,0 +1,11 @@
+#!/usr/bin/env ansible-playbook
+---
+- hosts: all
+  gather_facts: no
+  become: no
+  tasks:
+  - name: 'Run "mssh root@" for all specified hosts'
+    delegate_to: localhost
+    run_once: yes
+    shell:
+      cmd: "mssh root@{{ ansible_play_hosts | sort | join(' root@') }} &"
