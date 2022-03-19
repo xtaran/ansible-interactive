@@ -4,9 +4,12 @@ Ansible Playbooks for Interactive Tools
 Description
 -----------
 
-Playbooks to call interactive tools for Ansible host groups. So far
-[`mssh`](http://hgarcia.es/) and [Liboping](https://noping.cc/)'s
-`noping` are supported. All scripts so far open a separate window.
+This repository contains Ansible playbooks to call interactive tools
+for Ansible host groups.
+
+So far [`mssh`](http://hgarcia.es/) and
+[Liboping](https://noping.cc/)'s `noping` are supported. All scripts
+so far open a separate window.
 
 You can pass any host group you've defined in Your Ansible `hosts`
 file to these scripts as parameters, separated by blanks as usual on
