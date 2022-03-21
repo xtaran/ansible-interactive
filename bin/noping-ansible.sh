@@ -1,6 +1,7 @@
 #!/bin/sh
 
-cd "$(dirname $(readlink -f $0))/.."
+. $(dirname $(realpath $0))/../lib/follow-symlink-chain.inc.sh
+
 if [ -z "$1" ]; then
     set -- all
 fi

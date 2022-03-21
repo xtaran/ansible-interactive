@@ -48,11 +48,9 @@ Requirements
 Installation
 ------------
 
-There is no installation routine yet. What works is copying the `bin/`
-directory (not only the files in it) and the `*.yml` playbooks into
-your playbook.
+There is no installation routine yet.
 
-Symlinks for the playbooks will work, but for the scripts it's
-currently expected that there symlink target is in a first-level
-subdirectory (usually `bin`, but can be named differently) of where
-your Ansible playbooks and `hosts` file is located.
+What works is symlinking the `bin/` directory (or the files in it) and
+the `*.yml` playbooks into your playbook, and then linking the scripts
+in the `bin/` directory in your playbook directory to somewhere in
+your search path `$PATH`.
