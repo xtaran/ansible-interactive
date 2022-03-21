@@ -12,7 +12,10 @@ So far supported:
 * [`mssh`](http://hgarcia.es/)
 * [Liboping](https://noping.cc/)'s `noping`
 
-All scripts so far open a separate window.
+All scripts so far open a separate window. (Even the TUI tool `noping`
+opens a new xterm window, because Ansible doesn't pass the terminal to
+its called commands and because you usually want rather small fonts
+anyway.)
 
 You can pass any host group you've defined in Your Ansible `hosts`
 file to these scripts as parameters, separated by blanks as usual on
