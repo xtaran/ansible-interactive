@@ -8,7 +8,9 @@ echo "Checking for $(realpath -s hosts)"
 while [ ! -r hosts ]; do
     link_target=$(readlink $script)
     if [ -n "$link_target" ]; then
-        link_target=$(realpath -s "bin/$link_target")
+        if ! echo "$link_target" | egrep -q '^/'; then
+            link_target=$(realpath -s "bin/$link_target")
+        fi
         cd $(dirname "$link_target")/..
     else
         echo `pwd`"/$script is no symlink
