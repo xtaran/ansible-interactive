@@ -10,7 +10,7 @@ for Ansible host groups.
 So far supported:
 
 * [`mssh`](http://hgarcia.es/)
-* [Liboping](https://noping.cc/)'s `noping`
+* [Liboping](https://noping.cc/)'s `oping` and `noping`
 
 All scripts so far open a separate window. (Even the TUI tool `noping`
 opens a new xterm window, because Ansible doesn't pass the terminal to

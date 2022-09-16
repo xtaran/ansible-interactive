@@ -1,0 +1,11 @@
+#!/usr/bin/env ansible-playbook
+---
+- hosts: all
+  gather_facts: no
+  become: no
+  tasks:
+  - name: 'Run "oping" for all specified hosts'
+    delegate_to: localhost
+    run_once: yes
+    shell:
+      cmd: "lxterm -fn -misc-fixed-medium-r-normal--7-70-75-75-c-50-iso*-1 -e oping {{ ansible_play_hosts | sort | join(' ') }} &"
